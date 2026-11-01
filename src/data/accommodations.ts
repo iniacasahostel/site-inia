@@ -3,14 +3,14 @@ import type { Accommodation, AmenityKey } from '../types'
 /*
  * As acomodações do hostel (dados de referência do Booking):
  * nome, camas, nº de hóspedes, Wi-Fi e preço "a partir de" (valores de referência do Booking).
- * Fotos reais em public/fotos/. Descrições e o que mais estiver marcado com [PREENCHER] ainda são provisórios.
+ * Fotos reais em public/fotos/. O que estiver marcado com [PREENCHER] ainda é provisório.
  */
 
 /** Foto real em public/fotos/: <nome>.webp (1200px) e <nome>-mini.webp (miniatura) */
 const foto = (name: string, alt: string) => ({ src: `/fotos/${name}.webp`, thumb: `/fotos/${name}-mini.webp`, alt })
 
 /* Iguais para todas as acomodações */
-const incluso = ['Acesso à lavanderia', 'Cozinha comunitária', 'Estacionamento']
+const incluso = ['Acesso à lavanderia (máquina de lavar com taxa à parte)', 'Cozinha comunitária', 'Estacionamento']
 const comodidades: AmenityKey[] = ['wifi', 'redario', 'fogueira', 'atividades']
 
 export const accommodations: Accommodation[] = [
@@ -22,7 +22,7 @@ export const accommodations: Accommodation[] = [
     accent: 'pessego',
     summary: 'Quarto privativo com um janelão aberto para a mata, para até duas pessoas.',
     description:
-      '[PREENCHER] Descrição real do quarto. Ex.: como é o quarto, a vista do janelão, o vitral, ventilador, onde fica o banheiro.',
+      'Um quarto amplo e cheio de luz, com um janelão aberto para a mata. De dia, o verde entra pela janela; à noite, é só apagar a luz para ver o céu estrelado do Capão. Tem ventilador, armário e cabideiro para você se acomodar com calma.',
     capacity: 2,
     beds: ['1 cama de casal'], // [PREENCHER] confirmar a cama
     bathroom: 'comunitário',
@@ -44,7 +44,7 @@ export const accommodations: Accommodation[] = [
     accent: 'rosa',
     summary: 'Quarto privativo de madeira e janelas para a mata, para até duas pessoas.',
     description:
-      '[PREENCHER] Descrição real do quarto. Ex.: como é o quarto, as janelas, ventilador, onde fica o banheiro.',
+      'Aconchegante e com detalhes em madeira. São duas janelas na lateral e outra bem de frente para a cama, todas com vista para a mata, para acordar com a luz entrando devagar. Tem ventilador, armário e cabideiro para você se acomodar com calma.',
     capacity: 2,
     beds: ['1 cama de casal'], // [PREENCHER] confirmar a cama
     bathroom: 'comunitário',
@@ -66,9 +66,9 @@ export const accommodations: Accommodation[] = [
     feminine: true,
     kind: 'tenda',
     accent: 'verde',
-    summary: 'Uma tenda só sua, para até duas pessoas, para dormir pertinho da natureza.',
+    summary: 'Uma barraca só sua entre as árvores, para até duas pessoas, para dormir pertinho da natureza.',
     description:
-      '[PREENCHER] Descrição real da tenda. Ex.: onde ficam as tendas, se são cobertas, o que tem dentro, onde fica o banheiro.',
+      'A barraca fica montada no meio das árvores, protegida por uma lona, e já vem com roupa de cama limpa, macia e cheirosa. É só chegar, se ajeitar e descansar em paz depois das trilhas, embalado pelos sons da mata.',
     capacity: 2,
     beds: ['1 cama de solteiro'], // [PREENCHER] confirmar a cama quando são 2 pessoas
     // [PREENCHER] o preço é o do Booking para 1 pessoa; confirmar o valor para 2
@@ -94,7 +94,7 @@ export const accommodations: Accommodation[] = [
     accent: 'azul',
     summary: 'Cama de solteiro em dormitório compartilhado, para quem viaja leve e gosta de conhecer gente da estrada.',
     description:
-      '[PREENCHER] Descrição real do dormitório. Ex.: quantas camas, se são beliches, armário, tomada, onde fica o banheiro.',
+      'Cama limpa, macia e cheirosa para você recarregar as energias e aproveitar o Capão ao máximo. Um jeito econômico de se hospedar e de trocar histórias com outros viajantes.',
     capacity: 6, // [PREENCHER] nº de camas do dormitório
     beds: ['Cama de solteiro (preço por cama)'],
     bathroom: 'comunitário',

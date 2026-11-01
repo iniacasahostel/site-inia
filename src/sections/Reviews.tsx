@@ -5,6 +5,12 @@ import { SectionTitle } from '../components/ui/SectionTitle'
 
 const tones = ['bg-rosa/45', 'bg-azul/50', 'bg-verde/40']
 
+/** "Bia Buitrago" → "BB" */
+const initials = (name: string) => {
+  const parts = name.split(' ')
+  return (parts[0][0] + (parts.length > 1 ? parts[parts.length - 1][0] : '')).toUpperCase()
+}
+
 export function Reviews() {
   return (
     <Section id="avaliacoes" tone="claro" labelledBy="avaliacoes-title">
@@ -23,10 +29,25 @@ export function Reviews() {
               ))}
             </div>
             <blockquote className="flex-1 text-lg leading-relaxed">“{r.text}”</blockquote>
-            <p className="mt-4 font-bold">{r.name}</p>
-            <p className="text-sm">
-              {r.origin} · {r.source}
-            </p>
+            <div className="mt-5 flex items-center gap-3">
+              {r.photo ? (
+                <img src={r.photo} alt="" width={48} height={48} loading="lazy" className="h-12 w-12 shrink-0 rounded-full object-cover" />
+              ) : (
+                <span
+                  className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-creme-claro font-display text-lg font-bold text-terracota-escuro"
+                  aria-hidden="true"
+                >
+                  {initials(r.name)}
+                </span>
+              )}
+              <div>
+                <p className="font-bold">{r.name}</p>
+                <p className="text-sm">
+                  Avaliação no {r.source}
+                  {r.note && ` · ${r.note}`}
+                </p>
+              </div>
+            </div>
           </li>
         ))}
       </ul>

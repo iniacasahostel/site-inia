@@ -213,30 +213,33 @@ export const routes: Route[] = [
 
 export interface Review {
   name: string
-  origin: string
   text: string
   source: string
+  /** ex.: "Tradução do inglês" */
+  note?: string
+  /** foto do hóspede em public/fotos/avaliacoes/ (sem foto, mostra as iniciais) */
+  photo?: string
 }
 
-/* DEPOIMENTOS DE EXEMPLO — substitua por avaliações reais antes de publicar. */
+/* Avaliações reais do Google (nota 5/5), com o texto como o hóspede escreveu. */
 export const reviews: Review[] = [
   {
-    name: '[PREENCHER] Hóspede 1',
-    origin: 'São Paulo, SP',
-    text: 'Casa linda, cozinha ótima e as melhores dicas de trilha. Voltei com vontade de ficar mais uma semana.',
-    source: 'Avaliação de exemplo',
+    name: 'Bia Buitrago',
+    text: 'Lugar lindo e experiência mágica 😍 perto de tudo e muito contato com a natureza',
+    source: 'Google',
+    photo: '/fotos/avaliacoes/bia.webp',
   },
   {
-    name: '[PREENCHER] Hóspede 2',
-    origin: 'Buenos Aires, Argentina',
-    text: 'Deixei a mochila grande guardada e fui fazer o Pati tranquila. Na volta, banho quente e rede no jardim.',
-    source: 'Avaliação de exemplo',
+    name: 'Mayara F Oliveira Dantas',
+    text: 'Casa! Lugar de muita conexão com a natureza e com o próximo. Bonito, leve e harmônico. Encantado pela voz da sereia. 💫',
+    source: 'Google',
+    photo: '/fotos/avaliacoes/mayara.webp',
   },
   {
-    name: '[PREENCHER] Hóspede 3',
-    origin: 'Salvador, BA',
-    text: 'Ambiente acolhedor, cozinha organizada e silêncio à noite. Lugar perfeito para descansar no Capão.',
-    source: 'Avaliação de exemplo',
+    name: 'Luca Nitschmann',
+    text: 'Lugar incrível, as pessoas/voluntários são os mais simpáticos que já encontrei em minhas viagens!',
+    source: 'Google',
+    note: 'Tradução do inglês',
   },
 ]
 

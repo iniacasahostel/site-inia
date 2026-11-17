@@ -6,9 +6,8 @@ export const siteConfig = {
   name: 'Iniã Casa Hostel',
   shortName: 'Iniã',
   tagline: 'Uma casa para descansar entre trilhas e cachoeiras no Vale do Capão.',
-  /** Endereço público, sem barra no final. Usado no canonical, nas prévias e no sitemap.
-   *  [PREENCHER] trocar pelo domínio definitivo quando houver. */
-  siteUrl: 'https://site-hostel.vercel.app',
+  /** Endereço público, sem barra no final. Usado no canonical, nas prévias e no sitemap. */
+  siteUrl: 'https://www.iniacasahostel.com.br',
 
   /** Apenas números, com DDI e DDD: 55 + 75 + número */
   whatsapp: '5575982453894',

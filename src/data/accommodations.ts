@@ -95,7 +95,7 @@ export const accommodations: Accommodation[] = [
     summary: 'Cama de solteiro em dormitório compartilhado, para quem viaja leve e gosta de conhecer gente da estrada.',
     description:
       'Cama limpa, macia e cheirosa para você recarregar as energias e aproveitar o Capão ao máximo. Um jeito econômico de se hospedar e de trocar histórias com outros viajantes.',
-    capacity: 6, // [PREENCHER] nº de camas do dormitório
+    capacity: 3, // nº de camas do dormitório
     beds: ['Cama de solteiro (preço por cama)'],
     bathroom: 'comunitário',
     priceFrom: 65,
